@@ -1,63 +1,98 @@
-# Importamos la clase base abstracta Entidad para que Cliente herede su comportamiento.
+import re
+
+from excepciones.errores_personalizados import (
+    DatosInvalidosError,
+    ParametroFaltanteError,
+)
 from modelos.entidad import Entidad
+from utilidades.logger import logger
 
 
-# La clase Cliente representa a una persona o usuario con datos básicos.
 class Cliente(Entidad):
+    """Representa un cliente y mantiene sus datos validados y encapsulados."""
 
-    # Constructor de la clase; inicializa los atributos principales del cliente.
-    def __init__(self, nombre, identificacion, correo):
-        # Se asignan los valores usando los setters para validar la información.
+    def __init__(self, nombre=None, identificacion=None, correo=None):
+        # Los setters validan los valores desde la creación y en cada cambio posterior.
         self.nombre = nombre
         self.identificacion = identificacion
         self.correo = correo
 
-    # Getter del nombre.
     @property
     def nombre(self):
+        # Los atributos con doble guion bajo evitan el acceso directo desde fuera.
         return self.__nombre
 
-    # Setter del nombre con validación.
     @nombre.setter
     def nombre(self, nuevo_nombre):
-        # El nombre no puede quedar vacío.
-        if not nuevo_nombre:
-            raise ValueError("El nombre no puede estar vacío")
-        self.__nombre = nuevo_nombre
+        self.__nombre = self._validar_texto(nuevo_nombre, "nombre")
 
-    # Getter de la identificación.
     @property
     def identificacion(self):
         return self.__identificacion
 
-    # Setter de la identificación con validación.
     @identificacion.setter
     def identificacion(self, nueva_identificacion):
-        # La identificación no puede estar vacía.
-        if not nueva_identificacion:
-            raise ValueError("La identificación no puede estar vacía")
-        self.__identificacion = nueva_identificacion
+        # Se distingue entre un parámetro omitido y un valor con formato incorrecto.
+        if nueva_identificacion is None:
+            mensaje = "Falta el parámetro obligatorio: identificación."
+            logger.error(mensaje)
+            raise ParametroFaltanteError(mensaje)
+        if isinstance(nueva_identificacion, bool) or not isinstance(
+            nueva_identificacion, (str, int)
+        ):
+            mensaje = "La identificación debe ser texto o un número entero."
+            logger.error(mensaje)
+            raise DatosInvalidosError(mensaje)
 
-    # Getter del correo.
+        # Guardar la identificación como texto conserva ceros iniciales (por ejemplo, "00123").
+        identificacion = str(nueva_identificacion).strip()
+        if not identificacion:
+            mensaje = "La identificación no puede estar vacía."
+            logger.error(mensaje)
+            raise DatosInvalidosError(mensaje)
+        self.__identificacion = identificacion
+
     @property
     def correo(self):
         return self.__correo
 
-    # Setter del correo con validación del formato.
     @correo.setter
     def correo(self, nuevo_correo):
-        # No se permite un correo vacío.
-        if not nuevo_correo:
-            raise ValueError("El correo no puede estar vacío")
+        correo = self._validar_texto(nuevo_correo, "correo")
+        # Esta expresión comprueba una estructura básica de correo sin espacios.
+        if not re.fullmatch(r"[^@\s]+@[^@\s]+\.[^@\s]+", correo):
+            mensaje = "El correo no tiene un formato válido."
+            logger.error(mensaje)
+            raise DatosInvalidosError(mensaje)
+        # Se normaliza para evitar duplicados causados solo por mayúsculas.
+        self.__correo = correo.lower()
 
-        # Se valida que tenga un formato básico con '@' y '.' para ser válido.
-        if "@" not in nuevo_correo or "." not in nuevo_correo:
-            raise ValueError("El correo no tiene un formato válido")
+    @staticmethod
+    def _validar_texto(valor, campo):
+        """Comprueba que un dato requerido sea texto y no esté vacío."""
+        if valor is None:
+            mensaje = f"Falta el parámetro obligatorio: {campo}."
+            logger.error(mensaje)
+            raise ParametroFaltanteError(mensaje)
+        if not isinstance(valor, str):
+            mensaje = f"El {campo} debe ser texto."
+            logger.error(mensaje)
+            raise DatosInvalidosError(mensaje)
 
-        self.__correo = nuevo_correo
+        # Unifica espacios y elimina los extremos antes de almacenar el valor.
+        valor = " ".join(valor.split())
+        if not valor:
+            mensaje = f"El {campo} no puede estar vacío."
+            logger.error(mensaje)
+            raise DatosInvalidosError(mensaje)
+        return valor
 
-    # Método para mostrar la información del cliente en pantalla.
     def mostrar_informacion(self):
-        print(f"Nombre: {self.__nombre}")
-        print(f"Identificación: {self.__identificacion}")
-        print(f"Correo: {self.__correo}")
+        # Se devuelve el texto además de imprimirlo para permitir reutilizarlo.
+        informacion = (
+            f"Nombre: {self.__nombre}\n"
+            f"Identificación: {self.__identificacion}\n"
+            f"Correo: {self.__correo}"
+        )
+        print(informacion)
+        return informacion
