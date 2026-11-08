@@ -1,6 +1,7 @@
 
 # Importamos la clase Cliente desde el módulo correspondiente.
 from modelos.cliente import Cliente
+from modelos.servicio import Servicio
 
 # Creamos un cliente válido para probar la clase.
 cliente1 = Cliente(
@@ -25,3 +26,7 @@ try:
 except ValueError as error:
     # Capturamos la excepción y la mostramos como mensaje de error.
     print(f"Error: {error}")
+
+
+
+servicio1 = Servicio()
