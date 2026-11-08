@@ -2,4 +2,7 @@ from abc import ABC, abstractmethod
 
 
 class Entidad(ABC):
-    pass
+
+    @abstractmethod
+    def mostrar_informacion(self):
+        pass
