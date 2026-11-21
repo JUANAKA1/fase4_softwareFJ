@@ -1,2 +1,109 @@
 2026-11-08 16:59:00,342 - ERROR - El correo no tiene un formato válido.
 2026-11-08 16:59:33,741 - ERROR - El correo no tiene un formato válido.
+2026-11-21 12:01:21,677 - INFO - Inicio de la simulación del sistema Software FJ.
+2026-11-21 12:01:21,677 - INFO - Operación 1 completada: cliente registrado correctamente.
+2026-11-21 12:01:21,678 - ERROR - El correo no tiene un formato válido.
+2026-11-21 12:01:21,678 - ERROR - Operación 2: dato inválido detectado: El correo no tiene un formato válido.
+2026-11-21 12:01:21,678 - ERROR - Falta el parámetro obligatorio: identificación.
+2026-11-21 12:01:21,678 - ERROR - Operación 3: parámetro faltante: Falta el parámetro obligatorio: identificación.
+2026-11-21 12:01:21,678 - INFO - Parámetros de la sala validados correctamente.
+2026-11-21 12:01:21,678 - INFO - Descripción de la sala generada.
+2026-11-21 12:01:21,678 - INFO - Operación 4 completada: sala creada correctamente.
+2026-11-21 12:01:21,678 - INFO - Parámetros validados para el equipo 'Proyector Epson'.
+2026-11-21 12:01:21,678 - INFO - Parámetros validados para asesoría en 'Ciberseguridad'.
+2026-11-21 12:01:21,678 - INFO - Descripción generada para equipo 'Proyector Epson'.
+2026-11-21 12:01:21,678 - INFO - Descripción generada para asesoría 'Ciberseguridad'.
+2026-11-21 12:01:21,678 - INFO - Operación 5 completada: servicios creados correctamente.
+2026-11-21 12:01:21,678 - ERROR - El costo por día debe ser un número mayor que cero.
+2026-11-21 12:01:21,678 - ERROR - Operación 6: servicio inválido: El costo por día debe ser un número mayor que cero.
+2026-11-21 12:01:21,678 - INFO - Descripción de la sala generada.
+2026-11-21 12:01:21,678 - INFO - Parámetros de la sala validados correctamente.
+2026-11-21 12:01:21,678 - INFO - Reserva confirmada para el cliente 'Carlos Pérez'.
+2026-11-21 12:01:21,678 - INFO - Intento de confirmación finalizado. Estado actual: CONFIRMADA.
+2026-11-21 12:01:21,678 - INFO - Costo de reserva calculado correctamente.
+2026-11-21 12:01:21,678 - INFO - Reserva procesada para 'Carlos Pérez'. Costo: 107100.00
+2026-11-21 12:01:21,678 - INFO - Intento de procesamiento finalizado. Estado actual: PROCESADA.
+2026-11-21 12:01:21,678 - INFO - Operación 7 completada: reserva procesada correctamente.
+2026-11-21 12:01:21,678 - ERROR - La duración de la reserva debe ser mayor que cero.
+2026-11-21 12:01:21,678 - ERROR - Operación 8: reserva inválida: La duración de la reserva debe ser mayor que cero.
+2026-11-21 12:01:21,679 - ERROR - Error al procesar reserva: Solo se pueden procesar reservas confirmadas. Estado actual: PENDIENTE.
+2026-11-21 12:01:21,679 - INFO - Intento de procesamiento finalizado. Estado actual: PENDIENTE.
+2026-11-21 12:01:21,679 - ERROR - Operación 9: La reserva no se puede procesar porque no fue confirmada. | Causa: Solo se pueden procesar reservas confirmadas. Estado actual: PENDIENTE.
+2026-11-21 12:01:21,679 - INFO - Parámetros validados para el equipo 'Proyector Epson'.
+2026-11-21 12:01:21,679 - INFO - Reserva confirmada para el cliente 'Luisa Martínez'.
+2026-11-21 12:01:21,679 - INFO - Intento de confirmación finalizado. Estado actual: CONFIRMADA.
+2026-11-21 12:01:21,679 - INFO - Reserva cancelada para 'Luisa Martínez'. Motivo: El cliente cambió la fecha del alquiler.
+2026-11-21 12:01:21,679 - INFO - Intento de cancelación finalizado. Estado actual: CANCELADA.
+2026-11-21 12:01:21,679 - INFO - Operación 10 completada: reserva cancelada correctamente.
+2026-11-21 12:01:21,679 - INFO - Parámetros de la sala validados correctamente.
+2026-11-21 12:01:21,679 - INFO - La capacidad de la sala es suficiente.
+2026-11-21 12:01:21,679 - INFO - La sala está disponible para el horario solicitado.
+2026-11-21 12:01:21,679 - INFO - Reserva registrada correctamente para la sala Sala Principal.
+2026-11-21 12:01:21,679 - INFO - Parámetros de la sala validados correctamente.
+2026-11-21 12:01:21,679 - INFO - La capacidad de la sala es suficiente.
+2026-11-21 12:01:21,679 - WARNING - La sala no está disponible en ese horario.
+2026-11-21 12:01:21,679 - ERROR - No se pudo registrar la reserva: La sala Sala Principal ya está reservada en ese horario.
+2026-11-21 12:01:21,679 - ERROR - Operación 11: servicio no disponible: La sala Sala Principal ya está reservada en ese horario.
+2026-11-21 12:01:21,680 - ERROR - El impuesto debe estar entre 0 y 1.
+2026-11-21 12:01:21,680 - ERROR - Operación 12: error de cálculo: El impuesto debe estar entre 0 y 1.
+2026-11-21 12:01:21,680 - INFO - Simulación finalizada. Clientes=2, Servicios=3, Reservas=3
+2026-11-21 12:01:21,828 - ERROR - Falta el parámetro obligatorio: nombre.
+2026-11-21 12:01:21,828 - ERROR - El correo no tiene un formato válido.
+2026-11-21 12:01:21,828 - ERROR - La identificación no puede estar vacía.
+2026-11-21 12:01:21,831 - INFO - Costo de reserva calculado correctamente.
+2026-11-21 12:01:21,831 - ERROR - La sala admite máximo 20 personas. Se solicitaron 25.
+2026-11-21 12:01:21,831 - INFO - Parámetros de la sala validados correctamente.
+2026-11-21 12:01:21,831 - INFO - La capacidad de la sala es suficiente.
+2026-11-21 12:01:21,831 - INFO - La sala está disponible para el horario solicitado.
+2026-11-21 12:01:21,831 - INFO - Reserva registrada correctamente para la sala Sala Principal.
+2026-11-21 12:01:21,832 - INFO - Parámetros de la sala validados correctamente.
+2026-11-21 12:01:21,832 - INFO - La capacidad de la sala es suficiente.
+2026-11-21 12:01:21,832 - WARNING - La sala no está disponible en ese horario.
+2026-11-21 12:01:21,832 - ERROR - No se pudo registrar la reserva: La sala Sala Principal ya está reservada en ese horario.
+2026-11-21 12:03:14,130 - INFO - Inicio de la simulación del sistema Software FJ.
+2026-11-21 12:03:14,131 - INFO - Operación 1 completada: cliente registrado correctamente.
+2026-11-21 12:03:14,131 - ERROR - El correo no tiene un formato válido.
+2026-11-21 12:03:14,131 - ERROR - Operación 2: dato inválido detectado: El correo no tiene un formato válido.
+2026-11-21 12:03:14,131 - ERROR - Falta el parámetro obligatorio: identificación.
+2026-11-21 12:03:14,132 - ERROR - Operación 3: parámetro faltante: Falta el parámetro obligatorio: identificación.
+2026-11-21 12:03:14,132 - INFO - Parámetros de la sala validados correctamente.
+2026-11-21 12:03:14,132 - INFO - Descripción de la sala generada.
+2026-11-21 12:03:14,132 - INFO - Operación 4 completada: sala creada correctamente.
+2026-11-21 12:03:14,132 - INFO - Parámetros validados para el equipo 'Proyector Epson'.
+2026-11-21 12:03:14,133 - INFO - Parámetros validados para asesoría en 'Ciberseguridad'.
+2026-11-21 12:03:14,133 - INFO - Descripción generada para equipo 'Proyector Epson'.
+2026-11-21 12:03:14,133 - INFO - Descripción generada para asesoría 'Ciberseguridad'.
+2026-11-21 12:03:14,133 - INFO - Operación 5 completada: servicios creados correctamente.
+2026-11-21 12:03:14,133 - ERROR - El costo por día debe ser un número mayor que cero.
+2026-11-21 12:03:14,133 - ERROR - Operación 6: servicio inválido: El costo por día debe ser un número mayor que cero.
+2026-11-21 12:03:14,133 - INFO - Descripción de la sala generada.
+2026-11-21 12:03:14,134 - INFO - Parámetros de la sala validados correctamente.
+2026-11-21 12:03:14,134 - INFO - Reserva confirmada para el cliente 'Carlos Pérez'.
+2026-11-21 12:03:14,134 - INFO - Intento de confirmación finalizado. Estado actual: CONFIRMADA.
+2026-11-21 12:03:14,134 - INFO - Costo de reserva calculado correctamente.
+2026-11-21 12:03:14,134 - INFO - Reserva procesada para 'Carlos Pérez'. Costo: 107100.00
+2026-11-21 12:03:14,134 - INFO - Intento de procesamiento finalizado. Estado actual: PROCESADA.
+2026-11-21 12:03:14,134 - INFO - Operación 7 completada: reserva procesada correctamente.
+2026-11-21 12:03:14,135 - ERROR - La duración de la reserva debe ser mayor que cero.
+2026-11-21 12:03:14,135 - ERROR - Operación 8: reserva inválida: La duración de la reserva debe ser mayor que cero.
+2026-11-21 12:03:14,135 - ERROR - Error al procesar reserva: Solo se pueden procesar reservas confirmadas. Estado actual: PENDIENTE.
+2026-11-21 12:03:14,135 - INFO - Intento de procesamiento finalizado. Estado actual: PENDIENTE.
+2026-11-21 12:03:14,135 - ERROR - Operación 9: La reserva no se puede procesar porque no fue confirmada. | Causa: Solo se pueden procesar reservas confirmadas. Estado actual: PENDIENTE.
+2026-11-21 12:03:14,135 - INFO - Parámetros validados para el equipo 'Proyector Epson'.
+2026-11-21 12:03:14,136 - INFO - Reserva confirmada para el cliente 'Luisa Martínez'.
+2026-11-21 12:03:14,136 - INFO - Intento de confirmación finalizado. Estado actual: CONFIRMADA.
+2026-11-21 12:03:14,136 - INFO - Reserva cancelada para 'Luisa Martínez'. Motivo: El cliente cambió la fecha del alquiler.
+2026-11-21 12:03:14,136 - INFO - Intento de cancelación finalizado. Estado actual: CANCELADA.
+2026-11-21 12:03:14,136 - INFO - Operación 10 completada: reserva cancelada correctamente.
+2026-11-21 12:03:14,136 - INFO - Parámetros de la sala validados correctamente.
+2026-11-21 12:03:14,136 - INFO - La capacidad de la sala es suficiente.
+2026-11-21 12:03:14,136 - INFO - La sala está disponible para el horario solicitado.
+2026-11-21 12:03:14,136 - INFO - Reserva registrada correctamente para la sala Sala Principal.
+2026-11-21 12:03:14,136 - INFO - Parámetros de la sala validados correctamente.
+2026-11-21 12:03:14,136 - INFO - La capacidad de la sala es suficiente.
+2026-11-21 12:03:14,136 - WARNING - La sala no está disponible en ese horario.
+2026-11-21 12:03:14,136 - ERROR - No se pudo registrar la reserva: La sala Sala Principal ya está reservada en ese horario.
+2026-11-21 12:03:14,136 - ERROR - Operación 11: servicio no disponible: La sala Sala Principal ya está reservada en ese horario.
+2026-11-21 12:03:14,137 - ERROR - El impuesto debe estar entre 0 y 1.
+2026-11-21 12:03:14,137 - ERROR - Operación 12: error de cálculo: El impuesto debe estar entre 0 y 1.
+2026-11-21 12:03:14,137 - INFO - Simulación finalizada. Clientes=2, Servicios=3, Reservas=3

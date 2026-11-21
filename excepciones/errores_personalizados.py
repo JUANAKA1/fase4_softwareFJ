@@ -36,3 +36,7 @@ class ReservaNoEncontradaError(SoftwareFJError):
 
 class ArchivoSistemaError(SoftwareFJError):
     """Se utiliza cuando ocurre un problema con un archivo del sistema."""
+
+
+class CalculoInconsistenteError(SoftwareFJError):
+    """Se utiliza cuando un cálculo produce un resultado inconsistente o inválido."""
